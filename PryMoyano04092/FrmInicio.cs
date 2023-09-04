@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace PryMoyano04092
 {
-    public partial class Form1 : Form
+    public partial class FrmInicio : Form
     {
-        public Form1()
+        public FrmInicio()
         {
             InitializeComponent();
+        }
+
+        private void btnmostrar_Click(object sender, EventArgs e)
+        {
+            fbdcarpetas = new FolderBrowserDialog();
+            fbdcarpetas.ShowDialog();
+            lbldireccioncarpeta.Text = fbdcarpetas.SelectedPath;
+
+
         }
     }
 }
