@@ -31,7 +31,7 @@
             this.fbdcarpetas = new System.Windows.Forms.FolderBrowserDialog();
             this.btnmostrar = new System.Windows.Forms.Button();
             this.lbldireccioncarpeta = new System.Windows.Forms.Label();
-            this.txtMostrar = new System.Windows.Forms.TextBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
             // btnmostrar
@@ -51,13 +51,12 @@
             this.lbldireccioncarpeta.Size = new System.Drawing.Size(117, 23);
             this.lbldireccioncarpeta.TabIndex = 1;
             // 
-            // txtMostrar
+            // treeView1
             // 
-            this.txtMostrar.Location = new System.Drawing.Point(374, 47);
-            this.txtMostrar.Multiline = true;
-            this.txtMostrar.Name = "txtMostrar";
-            this.txtMostrar.Size = new System.Drawing.Size(271, 273);
-            this.txtMostrar.TabIndex = 2;
+            this.treeView1.Location = new System.Drawing.Point(182, 47);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(246, 334);
+            this.treeView1.TabIndex = 2;
             // 
             // FrmInicio
             // 
@@ -65,13 +64,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(686, 427);
-            this.Controls.Add(this.txtMostrar);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.lbldireccioncarpeta);
             this.Controls.Add(this.btnmostrar);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -80,6 +78,6 @@
         private System.Windows.Forms.FolderBrowserDialog fbdcarpetas;
         private System.Windows.Forms.Button btnmostrar;
         private System.Windows.Forms.Label lbldireccioncarpeta;
-        private System.Windows.Forms.TextBox txtMostrar;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
