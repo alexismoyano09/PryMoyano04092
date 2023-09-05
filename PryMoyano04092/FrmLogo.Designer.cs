@@ -32,6 +32,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.prbPorcentaje = new System.Windows.Forms.ProgressBar();
             this.lblporcentaje = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // timer1
@@ -47,6 +48,7 @@
             this.prbPorcentaje.Size = new System.Drawing.Size(47, 49);
             this.prbPorcentaje.TabIndex = 0;
             this.prbPorcentaje.Visible = false;
+            this.prbPorcentaje.Click += new System.EventHandler(this.prbPorcentaje_Click);
             // 
             // lblporcentaje
             // 
@@ -56,6 +58,12 @@
             this.lblporcentaje.Size = new System.Drawing.Size(50, 49);
             this.lblporcentaje.TabIndex = 1;
             this.lblporcentaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // FrmLogo
             // 
@@ -77,6 +85,7 @@
         private System.Windows.Forms.ProgressBar prbPorcentaje;
         private System.Windows.Forms.Label lblporcentaje;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

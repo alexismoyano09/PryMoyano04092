@@ -19,17 +19,22 @@ namespace PryMoyano04092
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            prbPorcentaje.Increment(9);
+            prbPorcentaje.Increment(20);
             lblporcentaje.Text = prbPorcentaje.Value.ToString() + "%";
 
             if (prbPorcentaje.Value == prbPorcentaje.Maximum) 
             {
                 timer1.Stop();
                 this.Hide();
-                FrmInicio frmInicio = new FrmInicio();
-                frmInicio.Show();
+                Frmmain frmmain = new Frmmain();
+                frmmain.Show();
             }
 
+
+        }
+
+        private void prbPorcentaje_Click(object sender, EventArgs e)
+        {
 
         }
     }
