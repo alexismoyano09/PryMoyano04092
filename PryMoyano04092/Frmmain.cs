@@ -24,12 +24,13 @@ namespace PryMoyano04092
         {
             TreeNode rootNode; //root node nombre del nodo, treenode tipo del node
 
-            DirectoryInfo info = new DirectoryInfo(@"C:\Users\Alumno");
+            
+            DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             if (info.Exists == true)  //por defecto el if pregunta true
             {
                 rootNode = new TreeNode(info.Name);
                 rootNode.Tag = info;
-               //GetDirectories(info.GetDirectories(), rootNode);
+                ObtenerCarpetas(info.GetDirectories(), rootNode);
                 treeView1.Nodes.Add(rootNode);
             }
         }
