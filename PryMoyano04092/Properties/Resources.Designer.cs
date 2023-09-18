@@ -61,6 +61,30 @@ namespace PryMoyano04092.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Nº	Entidad	APERTURA	Nº EXPTE.	JUZG.	JURISD	DIRECCION	LIQUIDADOR RESPONSABLE
+        ///1	Acuario Compañía de Seguros S.A.	24/2/1995	4707/1995	Comercial N° 2, Secretaría N° 3	CABA	M.T. Alvear 1840 2º piso	Dra. María Cristina Ubbriaco
+        ///2	Aeta del Chaco Cooperativa de Seguros Ltda.	15/11/1979	7062/96	Civil y Comercial, 6ta. Nominación	Resistencia-Chaco	Lopez y Planes 48. PA	Sr. Ricardo Crosetto
+        ///3	Alfa Compañía Argentina de Seguros S.A.	6/7/1994	3800416/93	Comercial N° 19, Secretaría N° 38	CABA	M.T. Alvear 1840 2º piso	 [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string datosProveedor {
+            get {
+                return ResourceManager.GetString("datosProveedor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nº;Entidad;APERTURA;Nº EXPTE.;JUZG.;JURISD;DIRECCION;LIQUIDADOR RESPONSABLE
+        ///1;Acuario Compañía de Seguros S.A.;24/2/1995;4707/1995;Comercial N° 2, Secretaría N° 3;CABA;M.T. Alvear 1840 2º piso;Dra. María Cristina Ubbriaco
+        ///2;Aeta del Chaco Cooperativa de Seguros Ltda.;15/11/1979;7062/96;Civil y Comercial, 6ta. Nominación;Resistencia-Chaco;Lopez y Planes 48. PA;Sr. Ricardo Crosetto
+        ///3;Alfa Compañía Argentina de Seguros S.A.;6/7/1994;3800416/93;Comercial N° 19, Secretaría N° 38;CABA;M.T. Alvear 1840 2º piso; [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Listado_de_aseguradores {
+            get {
+                return ResourceManager.GetString("Listado_de_aseguradores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap PACIFÍCO_SEGUROS {

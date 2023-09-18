@@ -24,7 +24,7 @@ namespace PryMoyano04092
         {
             TreeNode rootNode; //root node nombre del nodo, treenode tipo del node
 
-            DirectoryInfo info = new DirectoryInfo(@"C:\Users\alexi\Desktop\Proveedores");
+            DirectoryInfo info = new DirectoryInfo(@"C:\Users\Alumno");
             if (info.Exists == true)  //por defecto el if pregunta true
             {
                 rootNode = new TreeNode(info.Name);

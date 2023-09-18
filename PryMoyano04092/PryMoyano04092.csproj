@@ -109,10 +109,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Listado de aseguradores.csv" />
     <None Include="Resources\png-clipart-windows-10-recreation-file-and-internet-explorer-yellow-and-blue-folder-illustration.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PACIFÍCO SEGUROS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datosProveedor.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
