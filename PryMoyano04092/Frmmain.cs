@@ -17,12 +17,14 @@ namespace PryMoyano04092
         {
             InitializeComponent();
             LlenarTreeview();
+            this.treeView1.NodeMouseClick +=
+            new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
         }
         private void LlenarTreeview()
         {
             TreeNode rootNode; //root node nombre del nodo, treenode tipo del node
 
-            DirectoryInfo info = new DirectoryInfo(@"../..");
+            DirectoryInfo info = new DirectoryInfo(@"C:\Users\alexi\Desktop\Proveedores");
             if (info.Exists == true)  //por defecto el if pregunta true
             {
                 rootNode = new TreeNode(info.Name);
@@ -33,11 +35,69 @@ namespace PryMoyano04092
         }
         private void ObtenerCarpetas(DirectoryInfo[] subDirs,TreeNode nodeToAddTo) 
         {
-         
+            TreeNode aNode;
+            DirectoryInfo[] subSubDirs;
+
+            foreach (DirectoryInfo subDir in subDirs)
+            {
+                aNode = new TreeNode(subDir.Name, 0, 0);
+                aNode.Tag = subDir;
+                aNode.ImageKey = "folder";
+
+                //recursiva - se llama a si mismo para
+                //buscar màs carpetas
+                subSubDirs = subDir.GetDirectories();
+                if (subSubDirs.Length != 0)
+                {
+                    ObtenerCarpetas(subSubDirs, aNode);
+                }
+
+                nodeToAddTo.Nodes.Add(aNode);
+            }
         }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            
+            TreeNode newSelected = e.Node;
+            listView1.Items.Clear();
+            DirectoryInfo nodeDirInfo = (DirectoryInfo)newSelected.Tag;
+            ListViewItem.ListViewSubItem[] subItems;
+            ListViewItem item = null;
+
+            foreach (DirectoryInfo dir in nodeDirInfo.GetDirectories())
+            {
+                item = new ListViewItem(dir.Name, 0);
+                subItems = new ListViewItem.ListViewSubItem[]
+                    {new ListViewItem.ListViewSubItem(item, "Directory"),
+             new ListViewItem.ListViewSubItem(item,
+                dir.LastAccessTime.ToShortDateString())};
+                item.SubItems.AddRange(subItems);
+                listView1.Items.Add(item);
+            }
+            foreach (FileInfo file in nodeDirInfo.GetFiles())
+            {
+                item = new ListViewItem(file.Name, 1);
+                subItems = new ListViewItem.ListViewSubItem[]
+                    { new ListViewItem.ListViewSubItem(item, "File"),
+             new ListViewItem.ListViewSubItem(item,
+                file.LastAccessTime.ToShortDateString())};
+
+                item.SubItems.AddRange(subItems);
+                listView1.Items.Add(item);
+            }
+
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+        }
+
     }
 }

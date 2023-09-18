@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Detalle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -49,6 +49,7 @@
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(354, 401);
             this.treeView1.TabIndex = 2;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // listView1
             // 
@@ -67,6 +68,27 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // Nombre
+            // 
+            this.Nombre.Text = "Nombre";
+            this.Nombre.Width = 116;
+            // 
+            // Tipo
+            // 
+            this.Tipo.Text = "Tipo";
+            this.Tipo.Width = 117;
+            // 
+            // Detalle
+            // 
+            this.Detalle.Text = "Detalle";
+            this.Detalle.Width = 202;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Location = new System.Drawing.Point(12, 12);
@@ -82,27 +104,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(705, 401);
             this.splitContainer1.SplitterDistance = 354;
             this.splitContainer1.TabIndex = 3;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // Nombre
-            // 
-            this.Nombre.Text = "Nombre";
-            this.Nombre.Width = 116;
-            // 
-            // Tipo
-            // 
-            this.Tipo.Text = "Tipo";
-            this.Tipo.Width = 117;
-            // 
-            // Detalle
-            // 
-            this.Detalle.Text = "Detalle";
-            this.Detalle.Width = 202;
             // 
             // Frmmain
             // 

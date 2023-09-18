@@ -43,6 +43,7 @@
             // 
             // prbPorcentaje
             // 
+            this.prbPorcentaje.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.prbPorcentaje.Location = new System.Drawing.Point(13, 373);
             this.prbPorcentaje.Name = "prbPorcentaje";
             this.prbPorcentaje.Size = new System.Drawing.Size(47, 49);
@@ -52,12 +53,15 @@
             // 
             // lblporcentaje
             // 
-            this.lblporcentaje.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblporcentaje.Location = new System.Drawing.Point(401, 373);
+            this.lblporcentaje.BackColor = System.Drawing.Color.Transparent;
+            this.lblporcentaje.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblporcentaje.ForeColor = System.Drawing.Color.White;
+            this.lblporcentaje.Location = new System.Drawing.Point(66, 362);
             this.lblporcentaje.Name = "lblporcentaje";
             this.lblporcentaje.Size = new System.Drawing.Size(50, 49);
             this.lblporcentaje.TabIndex = 1;
             this.lblporcentaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblporcentaje.Click += new System.EventHandler(this.lblporcentaje_Click);
             // 
             // imageList1
             // 
@@ -70,9 +74,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblporcentaje);
             this.Controls.Add(this.prbPorcentaje);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -19,7 +19,7 @@ namespace PryMoyano04092
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            prbPorcentaje.Increment(20);
+            prbPorcentaje.Increment(13);
             lblporcentaje.Text = prbPorcentaje.Value.ToString() + "%";
 
             if (prbPorcentaje.Value == prbPorcentaje.Maximum) 
@@ -34,6 +34,11 @@ namespace PryMoyano04092
         }
 
         private void prbPorcentaje_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblporcentaje_Click(object sender, EventArgs e)
         {
 
         }
