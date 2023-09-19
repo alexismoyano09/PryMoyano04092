@@ -24,7 +24,7 @@ namespace PryMoyano04092
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void cargarProveedoresToolStripMenuItem1_Click(object sender, EventArgs e)

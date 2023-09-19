@@ -44,9 +44,9 @@
             // prbPorcentaje
             // 
             this.prbPorcentaje.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.prbPorcentaje.Location = new System.Drawing.Point(13, 373);
+            this.prbPorcentaje.Location = new System.Drawing.Point(12, 361);
             this.prbPorcentaje.Name = "prbPorcentaje";
-            this.prbPorcentaje.Size = new System.Drawing.Size(47, 49);
+            this.prbPorcentaje.Size = new System.Drawing.Size(47, 61);
             this.prbPorcentaje.TabIndex = 0;
             this.prbPorcentaje.Visible = false;
             this.prbPorcentaje.Click += new System.EventHandler(this.prbPorcentaje_Click);
@@ -56,7 +56,7 @@
             this.lblporcentaje.BackColor = System.Drawing.Color.Transparent;
             this.lblporcentaje.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblporcentaje.ForeColor = System.Drawing.Color.White;
-            this.lblporcentaje.Location = new System.Drawing.Point(66, 362);
+            this.lblporcentaje.Location = new System.Drawing.Point(66, 361);
             this.lblporcentaje.Name = "lblporcentaje";
             this.lblporcentaje.Size = new System.Drawing.Size(50, 49);
             this.lblporcentaje.TabIndex = 1;
