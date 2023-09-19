@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrar));
             this.gbregistro = new System.Windows.Forms.GroupBox();
-            this.btnvolver = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btngrabar = new System.Windows.Forms.Button();
@@ -48,7 +48,6 @@
             // 
             this.gbregistro.BackgroundImage = global::PryMoyano04092.Properties.Resources.groupbox2;
             this.gbregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gbregistro.Controls.Add(this.btnvolver);
             this.gbregistro.Controls.Add(this.button2);
             this.gbregistro.Controls.Add(this.button1);
             this.gbregistro.Controls.Add(this.btngrabar);
@@ -65,19 +64,6 @@
             this.gbregistro.Size = new System.Drawing.Size(776, 426);
             this.gbregistro.TabIndex = 0;
             this.gbregistro.TabStop = false;
-            // 
-            // btnvolver
-            // 
-            this.btnvolver.BackColor = System.Drawing.Color.Lavender;
-            this.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnvolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvolver.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnvolver.Location = new System.Drawing.Point(677, 10);
-            this.btnvolver.Name = "btnvolver";
-            this.btnvolver.Size = new System.Drawing.Size(93, 29);
-            this.btnvolver.TabIndex = 11;
-            this.btnvolver.Text = "Volver";
-            this.btnvolver.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -191,7 +177,9 @@
             this.ClientSize = new System.Drawing.Size(798, 445);
             this.Controls.Add(this.gbregistro);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRegistrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registra un nuevo Proveedor";
             this.gbregistro.ResumeLayout(false);
             this.gbregistro.PerformLayout();
@@ -202,7 +190,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbregistro;
-        private System.Windows.Forms.Button btnvolver;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btngrabar;

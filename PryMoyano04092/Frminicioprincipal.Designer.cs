@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frminicioprincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.verProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btncerrar = new System.Windows.Forms.Button();
+            this.cargarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btncerrar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,12 +54,11 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // verProveedoresToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.verProveedoresToolStripMenuItem.Name = "verProveedoresToolStripMenuItem";
-            this.verProveedoresToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.verProveedoresToolStripMenuItem.Text = "Ver Proveedores";
-            this.verProveedoresToolStripMenuItem.Click += new System.EventHandler(this.verProveedoresToolStripMenuItem_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(123, 20);
+            this.toolStripMenuItem1.Text = "PACÍFICO SEGUROS";
             // 
             // cargarProveedoresToolStripMenuItem
             // 
@@ -67,18 +67,25 @@
             this.cargarProveedoresToolStripMenuItem.Text = "|";
             this.cargarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.cargarProveedoresToolStripMenuItem_Click);
             // 
+            // verProveedoresToolStripMenuItem
+            // 
+            this.verProveedoresToolStripMenuItem.Name = "verProveedoresToolStripMenuItem";
+            this.verProveedoresToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.verProveedoresToolStripMenuItem.Text = "Ver Proveedores";
+            this.verProveedoresToolStripMenuItem.Click += new System.EventHandler(this.verProveedoresToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem2.Text = "|";
+            // 
             // cargarProveedoresToolStripMenuItem1
             // 
             this.cargarProveedoresToolStripMenuItem1.Name = "cargarProveedoresToolStripMenuItem1";
             this.cargarProveedoresToolStripMenuItem1.Size = new System.Drawing.Size(122, 20);
             this.cargarProveedoresToolStripMenuItem1.Text = "Cargar Proveedores";
             this.cargarProveedoresToolStripMenuItem1.Click += new System.EventHandler(this.cargarProveedoresToolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(123, 20);
-            this.toolStripMenuItem1.Text = "PACÍFICO SEGUROS";
             // 
             // btncerrar
             // 
@@ -92,12 +99,6 @@
             this.btncerrar.UseVisualStyleBackColor = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem2.Text = "|";
-            // 
             // Frminicioprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,6 +109,7 @@
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frminicioprincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmmain));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,7 +38,6 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvgrilla = new System.Windows.Forms.DataGridView();
-            this.btnmostrar = new System.Windows.Forms.Button();
             this.Nº = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Entidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APERTURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +46,7 @@
             this.JURISD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnmostrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -133,16 +134,6 @@
             this.dgvgrilla.Size = new System.Drawing.Size(705, 140);
             this.dgvgrilla.TabIndex = 4;
             // 
-            // btnmostrar
-            // 
-            this.btnmostrar.Location = new System.Drawing.Point(591, 585);
-            this.btnmostrar.Name = "btnmostrar";
-            this.btnmostrar.Size = new System.Drawing.Size(125, 41);
-            this.btnmostrar.TabIndex = 5;
-            this.btnmostrar.Text = "Mostrar";
-            this.btnmostrar.UseVisualStyleBackColor = true;
-            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
-            // 
             // Nº
             // 
             this.Nº.HeaderText = "Nº";
@@ -183,6 +174,16 @@
             this.LR.HeaderText = "LIQUIDADOR RESPONSABLE";
             this.LR.Name = "LR";
             // 
+            // btnmostrar
+            // 
+            this.btnmostrar.Location = new System.Drawing.Point(591, 585);
+            this.btnmostrar.Name = "btnmostrar";
+            this.btnmostrar.Size = new System.Drawing.Size(125, 41);
+            this.btnmostrar.TabIndex = 5;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.UseVisualStyleBackColor = true;
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            // 
             // Frmmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +195,7 @@
             this.Controls.Add(this.dgvgrilla);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmmain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Proveedores";
