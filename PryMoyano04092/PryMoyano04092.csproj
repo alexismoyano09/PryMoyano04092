@@ -71,6 +71,12 @@
     <Compile Include="Frmmain.Designer.cs">
       <DependentUpon>Frmmain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrar.Designer.cs">
+      <DependentUpon>FrmRegistrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmInicio.resx">
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frmmain.resx">
       <DependentUpon>Frmmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrar.resx">
+      <DependentUpon>FrmRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +126,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\datosProveedor.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PACIFÍCO SEGUROS %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PACIFÍCO SEGUROS %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupbox2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

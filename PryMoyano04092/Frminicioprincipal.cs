@@ -21,5 +21,22 @@ namespace PryMoyano04092
         {
 
         }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cargarProveedoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmRegistrar Ventana = new FrmRegistrar();
+            Ventana.ShowDialog();
+        }
+
+        private void verProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frmmain Ventana = new Frmmain();
+            Ventana.ShowDialog();
+        }
     }
 }

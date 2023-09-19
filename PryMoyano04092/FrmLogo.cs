@@ -26,8 +26,8 @@ namespace PryMoyano04092
             {
                 timer1.Stop();
                 this.Hide();
-                Frmmain frmmain = new Frmmain();
-                frmmain.Show();
+                Frminicioprincipal frminicioprincipal = new Frminicioprincipal();
+                frminicioprincipal.Show();
             }
 
 

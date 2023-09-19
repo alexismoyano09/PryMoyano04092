@@ -36,10 +36,21 @@
             this.Detalle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dgvgrilla = new System.Windows.Forms.DataGridView();
+            this.btnmostrar = new System.Windows.Forms.Button();
+            this.Nº = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Entidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APERTURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JUZG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JURISD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvgrilla)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -105,18 +116,92 @@
             this.splitContainer1.SplitterDistance = 354;
             this.splitContainer1.TabIndex = 3;
             // 
+            // dgvgrilla
+            // 
+            this.dgvgrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvgrilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nº,
+            this.Entidad,
+            this.APERTURA,
+            this.Column4,
+            this.JUZG,
+            this.JURISD,
+            this.DIRECCION,
+            this.LR});
+            this.dgvgrilla.Location = new System.Drawing.Point(12, 419);
+            this.dgvgrilla.Name = "dgvgrilla";
+            this.dgvgrilla.Size = new System.Drawing.Size(705, 140);
+            this.dgvgrilla.TabIndex = 4;
+            // 
+            // btnmostrar
+            // 
+            this.btnmostrar.Location = new System.Drawing.Point(591, 585);
+            this.btnmostrar.Name = "btnmostrar";
+            this.btnmostrar.Size = new System.Drawing.Size(125, 41);
+            this.btnmostrar.TabIndex = 5;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.UseVisualStyleBackColor = true;
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            // 
+            // Nº
+            // 
+            this.Nº.HeaderText = "Nº";
+            this.Nº.Name = "Nº";
+            // 
+            // Entidad
+            // 
+            this.Entidad.HeaderText = "Entidad";
+            this.Entidad.Name = "Entidad";
+            // 
+            // APERTURA
+            // 
+            this.APERTURA.HeaderText = "APERTURA";
+            this.APERTURA.Name = "APERTURA";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Nº EXPTE.";
+            this.Column4.Name = "Column4";
+            // 
+            // JUZG
+            // 
+            this.JUZG.HeaderText = "JUZG.";
+            this.JUZG.Name = "JUZG";
+            // 
+            // JURISD
+            // 
+            this.JURISD.HeaderText = "JURISD";
+            this.JURISD.Name = "JURISD";
+            // 
+            // DIRECCION
+            // 
+            this.DIRECCION.HeaderText = "DIRECCION";
+            this.DIRECCION.Name = "DIRECCION";
+            // 
+            // LR
+            // 
+            this.LR.HeaderText = "LIQUIDADOR RESPONSABLE";
+            this.LR.Name = "LR";
+            // 
             // Frmmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 427);
+            this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__2_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(728, 638);
+            this.Controls.Add(this.btnmostrar);
+            this.Controls.Add(this.dgvgrilla);
             this.Controls.Add(this.splitContainer1);
+            this.DoubleBuffered = true;
             this.Name = "Frmmain";
-            this.Text = "Frmmain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Datos de Proveedores";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvgrilla)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,5 +215,15 @@
         private System.Windows.Forms.ColumnHeader Tipo;
         private System.Windows.Forms.ColumnHeader Detalle;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.DataGridView dgvgrilla;
+        private System.Windows.Forms.Button btnmostrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nº;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Entidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APERTURA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JUZG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JURISD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LR;
     }
 }

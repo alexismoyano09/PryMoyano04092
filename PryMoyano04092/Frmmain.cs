@@ -100,5 +100,19 @@ namespace PryMoyano04092
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
+        private void btnmostrar_Click(object sender, EventArgs e)
+        {
+            //dgvgrilla.Rows.Add(@"../../" + "Resources/" + "Datos Proveedor");
+            StreamReader sr = new StreamReader("@\"../../\" + \"Resources\"");
+
+            dgvgrilla.Columns.Add("soyejemplo", "soyejemplo");
+
+            while(sr.EndOfStream == false) 
+            {
+                dgvgrilla.Rows.Add(sr.ReadLine());
+            }
+            sr.Close();
+
+        }
     }
 }

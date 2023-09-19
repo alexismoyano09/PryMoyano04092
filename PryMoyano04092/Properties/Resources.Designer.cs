@@ -63,9 +63,59 @@ namespace PryMoyano04092.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2 {
+            get {
+                object obj = ResourceManager.GetObject("2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap groupbox {
+            get {
+                object obj = ResourceManager.GetObject("groupbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap groupbox2 {
+            get {
+                object obj = ResourceManager.GetObject("groupbox2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PACIFÍCO_SEGUROS {
             get {
                 object obj = ResourceManager.GetObject("PACIFÍCO SEGUROS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PACIFÍCO_SEGUROS__1_ {
+            get {
+                object obj = ResourceManager.GetObject("PACIFÍCO SEGUROS (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PACIFÍCO_SEGUROS__2_ {
+            get {
+                object obj = ResourceManager.GetObject("PACIFÍCO SEGUROS (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
