@@ -50,7 +50,7 @@
             this.cargarProveedoresToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1427, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,9 +91,9 @@
             // 
             this.btncerrar.BackColor = System.Drawing.Color.White;
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncerrar.Location = new System.Drawing.Point(705, 419);
+            this.btncerrar.Location = new System.Drawing.Point(1294, 693);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(95, 30);
+            this.btncerrar.Size = new System.Drawing.Size(121, 39);
             this.btncerrar.TabIndex = 1;
             this.btncerrar.Text = "Cerrar";
             this.btncerrar.UseVisualStyleBackColor = false;
@@ -105,7 +105,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1427, 744);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
