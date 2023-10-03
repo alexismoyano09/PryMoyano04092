@@ -52,5 +52,15 @@ namespace PryMoyano04092
         {
 
         }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            int n = DtgGrillaMostrar.CurrentCell.RowIndex;
+
+            if (n != -1 ) 
+            {
+              
+            }
+        }
     }
 }
