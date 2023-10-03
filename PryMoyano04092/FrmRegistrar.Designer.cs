@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrar));
             this.gbregistro = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnborrar = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
             this.btngrabar = new System.Windows.Forms.Button();
             this.txtLresponsable = new System.Windows.Forms.TextBox();
             this.txtjurisdiccion = new System.Windows.Forms.TextBox();
@@ -48,8 +48,8 @@
             // 
             this.gbregistro.BackgroundImage = global::PryMoyano04092.Properties.Resources.groupbox2;
             this.gbregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gbregistro.Controls.Add(this.button2);
-            this.gbregistro.Controls.Add(this.button1);
+            this.gbregistro.Controls.Add(this.btnborrar);
+            this.gbregistro.Controls.Add(this.btnmodificar);
             this.gbregistro.Controls.Add(this.btngrabar);
             this.gbregistro.Controls.Add(this.txtLresponsable);
             this.gbregistro.Controls.Add(this.txtjurisdiccion);
@@ -65,31 +65,31 @@
             this.gbregistro.TabIndex = 0;
             this.gbregistro.TabStop = false;
             // 
-            // button2
+            // btnborrar
             // 
-            this.button2.BackColor = System.Drawing.Color.Lavender;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button2.Location = new System.Drawing.Point(518, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 36);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Borrar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnborrar.BackColor = System.Drawing.Color.Lavender;
+            this.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnborrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnborrar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnborrar.Location = new System.Drawing.Point(518, 360);
+            this.btnborrar.Name = "btnborrar";
+            this.btnborrar.Size = new System.Drawing.Size(109, 36);
+            this.btnborrar.TabIndex = 10;
+            this.btnborrar.Text = "Borrar";
+            this.btnborrar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnmodificar
             // 
-            this.button1.BackColor = System.Drawing.Color.Lavender;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Location = new System.Drawing.Point(337, 360);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 36);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnmodificar.BackColor = System.Drawing.Color.Lavender;
+            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnmodificar.Location = new System.Drawing.Point(337, 360);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(109, 36);
+            this.btnmodificar.TabIndex = 9;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = false;
             // 
             // btngrabar
             // 
@@ -103,6 +103,7 @@
             this.btngrabar.TabIndex = 8;
             this.btngrabar.Text = "Grabar";
             this.btngrabar.UseVisualStyleBackColor = false;
+            this.btngrabar.Click += new System.EventHandler(this.btngrabar_Click);
             // 
             // txtLresponsable
             // 
@@ -190,8 +191,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbregistro;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnborrar;
+        private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btngrabar;
         private System.Windows.Forms.TextBox txtLresponsable;
         private System.Windows.Forms.TextBox txtjurisdiccion;

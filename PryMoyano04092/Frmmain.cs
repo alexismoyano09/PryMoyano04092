@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using System.IO;
 
 namespace PryMoyano04092
 {
@@ -20,11 +21,12 @@ namespace PryMoyano04092
             this.treeView1.NodeMouseClick +=
             new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
         }
+        public string ruta = "";
         private void LlenarTreeview()
         {
             TreeNode rootNode; //root node nombre del nodo, treenode tipo del node
 
-            
+
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             if (info.Exists == true)  //por defecto el if pregunta true
             {
@@ -34,7 +36,7 @@ namespace PryMoyano04092
                 treeView1.Nodes.Add(rootNode);
             }
         }
-        private void ObtenerCarpetas(DirectoryInfo[] subDirs,TreeNode nodeToAddTo) 
+        private void ObtenerCarpetas(DirectoryInfo[] subDirs, TreeNode nodeToAddTo)
         {
             TreeNode aNode;
             DirectoryInfo[] subSubDirs;
@@ -68,9 +70,9 @@ namespace PryMoyano04092
 
         void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            
+
             TreeNode newSelected = e.Node;
-            listView1.Items.Clear();
+            lstvista.Items.Clear();
             DirectoryInfo nodeDirInfo = (DirectoryInfo)newSelected.Tag;
             ListViewItem.ListViewSubItem[] subItems;
             ListViewItem item = null;
@@ -83,7 +85,7 @@ namespace PryMoyano04092
              new ListViewItem.ListViewSubItem(item,
                 dir.LastAccessTime.ToShortDateString())};
                 item.SubItems.AddRange(subItems);
-                listView1.Items.Add(item);
+                lstvista.Items.Add(item);
             }
             foreach (FileInfo file in nodeDirInfo.GetFiles())
             {
@@ -94,25 +96,72 @@ namespace PryMoyano04092
                 file.LastAccessTime.ToShortDateString())};
 
                 item.SubItems.AddRange(subItems);
-                listView1.Items.Add(item);
+                lstvista.Items.Add(item);
             }
 
-            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            lstvista.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void btnmostrar_Click(object sender, EventArgs e)
         {
-            //dgvgrilla.Rows.Add(@"../../" + "Resources/" + "Datos Proveedor");
-            StreamReader sr = new StreamReader("@\"../../\" + \"Resources\"");
+            //frmdatosgrilla ventanaGrilla = new frmdatosgrilla();
+            //ventanaGrilla.Show();
+            //for (int indice = 0; indice < SepararDatos.Length; indice++)
+            //{
+                //usar la grilla para cargar
+              //  ventanaGrilla.GrillaMostrar.Rows.Add(SepararDatos[indice], SepararDatos[indice]);
 
-            dgvgrilla.Columns.Add("soyejemplo", "soyejemplo");
+            //}
+            //while (sr.EndOfStream == false)
+            //{
+             //   LeerLinea = sr.ReadLine();
+               // SepararDatos = LeerLinea.Split(';');
+                //ventanaGrilla.GrillaMostrar.Rows.Add(SepararDatos);
+            //}
+            //sr.Close();
 
-            while(sr.EndOfStream == false) 
+        }
+
+        private void Frmmain_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //Obtengo el texto que tiene el item seleccionado lstView
+            string i = lstvista.SelectedItems[0].Text.ToString();
+            
+            //En una variable concateno la ruta del treeview + el nombre del archivo anterior
+            string rutaArchivoParcial = Path.Combine(ruta, i);
+
+            //Aca esta la ruta final del archivo
+            string rutaArchivoFinal = Path.Combine(@"../../" + "Resources", rutaArchivoParcial);
+
+            //Instanciar la ventana de la grilla
+            frmdatosgrilla frmdatosgrilla = new frmdatosgrilla();
+
+            // Abre el archivo para lectura
+            using (StreamReader reader = new StreamReader(rutaArchivoFinal))
             {
-                dgvgrilla.Rows.Add(sr.ReadLine());
-            }
-            sr.Close();
+                // Lee y descarta la primera línea (encabezado)
+                reader.ReadLine();
 
+                // Lee el resto de las líneas
+                string linea;
+                while ((linea = reader.ReadLine()) != null)
+                {
+                    // Procesa la línea actual aquí
+                    string[] parametros = linea.Split(';');
+                    //agregar a la datagrid
+                   frmdatosgrilla.DtgGrillaMostrar.Rows.Add(parametros);
+                }
+            }
+            frmdatosgrilla.rutaArchivoGrilla = rutaArchivoFinal;
+
+            frmdatosgrilla.Show();
+            this.Hide();
         }
     }
 }

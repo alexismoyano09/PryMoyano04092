@@ -123,6 +123,16 @@ namespace PryMoyano04092.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PACIFÍCO_SEGUROS__3_ {
+            get {
+                object obj = ResourceManager.GetObject("PACIFÍCO SEGUROS (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_clipart_windows_10_recreation_file_and_internet_explorer_yellow_and_blue_folder_illustration {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-windows-10-recreation-file-and-internet-explorer-yellow-and-blue-fold" +

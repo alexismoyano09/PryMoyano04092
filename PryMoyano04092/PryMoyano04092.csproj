@@ -47,11 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmGrillaMostrarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGrillaMostrarDatos.Designer.cs">
+      <DependentUpon>FrmGrillaMostrarDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frminiciodesesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frminiciodesesion.Designer.cs">
+      <DependentUpon>Frminiciodesesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Frminicioprincipal.cs">
       <SubType>Form</SubType>
@@ -79,8 +91,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmGrillaMostrarDatos.resx">
+      <DependentUpon>FrmGrillaMostrarDatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frminiciodesesion.resx">
+      <DependentUpon>Frminiciodesesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frminicioprincipal.resx">
       <DependentUpon>Frminicioprincipal.cs</DependentUpon>
@@ -141,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\groupbox2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PACIFÍCO SEGUROS %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
