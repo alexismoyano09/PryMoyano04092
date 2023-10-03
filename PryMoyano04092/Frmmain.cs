@@ -130,31 +130,31 @@ namespace PryMoyano04092
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //Obtengo el texto que tiene el item seleccionado lstView
+            
             string i = lstvista.SelectedItems[0].Text.ToString();
             
-            //En una variable concateno la ruta del treeview + el nombre del archivo anterior
+            
             string rutaArchivoParcial = Path.Combine(ruta, i);
 
-            //Aca esta la ruta final del archivo
+               
             string rutaArchivoFinal = Path.Combine(@"../../" + "Resources", rutaArchivoParcial);
 
-            //Instanciar la ventana de la grilla
+            FrmRegistrar.rutafinal = rutaArchivoFinal;
             frmdatosgrilla frmdatosgrilla = new frmdatosgrilla();
 
-            // Abre el archivo para lectura
+           
             using (StreamReader reader = new StreamReader(rutaArchivoFinal))
             {
-                // Lee y descarta la primera línea (encabezado)
+                
                 reader.ReadLine();
 
-                // Lee el resto de las líneas
+                
                 string linea;
                 while ((linea = reader.ReadLine()) != null)
                 {
-                    // Procesa la línea actual aquí
+                    
                     string[] parametros = linea.Split(';');
-                    //agregar a la datagrid
+                    
                    frmdatosgrilla.DtgGrillaMostrar.Rows.Add(parametros);
                 }
             }

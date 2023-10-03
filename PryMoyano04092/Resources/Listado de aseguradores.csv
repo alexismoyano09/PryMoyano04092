@@ -1,7 +1,7 @@
-﻿Nº;Entidad;APERTURA;Nº EXPTE.;JUZG.;JURISD;DIRECCION;LIQUIDADOR RESPONSABLE
+Nº;Entidad;APERTURA;Nº EXPTE.;JUZG.;JURISD;DIRECCION;LIQUIDADOR RESPONSABLE
 1;Acuario Compañía de Seguros S.A.;24/2/1995;4707/1995;Comercial N° 2, Secretaría N° 3;CABA;M.T. Alvear 1840 2º piso;Dra. María Cristina Ubbriaco
 2;Aeta del Chaco Cooperativa de Seguros Ltda.;15/11/1979;7062/96;Civil y Comercial, 6ta. Nominación;Resistencia-Chaco;Lopez y Planes 48. PA;Sr. Ricardo Crosetto
-3;Alfa Compañía Argentina de Seguros S.A.;6/7/1994;3800416/93;Comercial N° 19, Secretaría N° 38;CABA;M.T. Alvear 1840 2º piso;Dra. María Alejandra Spagnolo
+3;Alfa Compañía Argentina de Seguros S.A.;6/7/1994;3800416/93;Comercial N° 19, Secretaría N° 38;Colonia Caroya;M.T. Alvear 1840 2º piso;Dra. María Alejandra Spagnolo;
 4;Ancora Compañía Argentina de seguros S.A.;27/6/1995;38036/1995;Comercial N° 16, Secretaría N° 31;CABA;M.T. Alvear 1840;Dra. María Cristina Ubbriaco
 5;Apolo Compañía de Seguros S.A.;30/11/1989;45369/2008;Comercial N° 24, Secretaría N° 47;CABA;M.T. Alvear 1840 2º;Cont. Orlando Marcelo Suarez
 6;Arcadia Compañía Argentina de Seguros S.A.;15/11/1996;44226/96;Comercial N° 3, Secretaría N° 5;CABA;Callao 635 6º PISO;Cont. Orlando Marcelo Suarez
@@ -113,7 +113,7 @@
 112;Occidente Sociedad Anónima de Seguros;30/11/1989;6188/94;Comercial N° 18, Secretaría N° 35;CABA;M.T. Alvear 1840 3º PISO;Dr. Luis Petrate Arguello
 113;Olam Cooperativa de Seguros Limitada;20/10/1998;75232/98;Comercial N° 15, Secretaría N° 29;CABA;Callao 635 3º;Cont. Orlando Marcelo Suarez
 114;Olimpia Compañía Argentina de Seguros S.A.;20/12/1985;16047508/85;Comercial N° 8, Secretaría N° 16;CABA;Av. Roque S. Peña 1211 7º PISO;Dra. Andrea Susana Rojas 
-115;Ombú Compañía Argentina de Seguros S.A.;19/10/1990;85559/95;Comercial N° 19, Secretaría N° 38;CABA;M.T. Alvear 1840 2º piso;Dr. Luis Petrate Arguello
+115;Ombú Compañía Argentina de Seguros S.A.;03/10/23;85559/95;Comercial N° 19, Secretaría N° 38;CABA;M.T. Alvear 1840 2º piso;Moyano Alexis;
 116;Omega Cooperativa de Seguros Limitada;26/4/2001;33922/2001;Comercial N° 1, Secretaría N° 2;CABA;Av. Roque S. Peña 1211 5º piso;Dra. Gabriela Inés Trapaglia
 117;Omega S.A.;6/7/2001;20067/01;Comercial N° 1, Secretaría N° 2;CABA;Av. Roque S. Peña 1211 5º piso;Dra. Gabriela Inés Trapaglia
 118;Patria Compañía de Seguros S.A.;3/9/1986;002050/93;Comercial N° 10, Secretaría N° 19;CABA;Callao 635 E.P.;Dra. Claudia Marcela Pariente

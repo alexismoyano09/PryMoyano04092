@@ -18,5 +18,39 @@ namespace PryMoyano04092
         }
 
         public string rutaArchivoGrilla { get; internal set; }
+
+        private void btnVolver1_Click(object sender, EventArgs e)
+        {
+            Frminicioprincipal Ventana = new Frminicioprincipal();
+            Ventana.ShowDialog();
+        }
+
+        private void btnmodificar1_Click(object sender, EventArgs e)
+        {
+            int n = DtgGrillaMostrar.CurrentCell.RowIndex;
+
+            FrmRegistrar modifico = new FrmRegistrar();
+
+            modifico.txtnumero.ReadOnly = true;
+
+            modifico.txtnumero.Text = DtgGrillaMostrar.Rows[n].Cells[0].Value.ToString();
+            modifico.txtentidad.Text = DtgGrillaMostrar.Rows[n].Cells[1].Value.ToString();
+            modifico.txtapertura.Text = DtgGrillaMostrar.Rows[n].Cells[2].Value.ToString();
+            modifico.txtNdeexpendiente.Text = DtgGrillaMostrar.Rows[n].Cells[3].Value.ToString();
+            modifico.txtjuzgado.Text = DtgGrillaMostrar.Rows[n].Cells[4].Value.ToString();
+            modifico.txtjurisdiccion.Text = DtgGrillaMostrar.Rows[n].Cells[5].Value.ToString();
+            modifico.txtdireccion.Text = DtgGrillaMostrar.Rows[n].Cells[6].Value.ToString();
+            modifico.txtLresponsable.Text = DtgGrillaMostrar.Rows[n].Cells[7].Value.ToString();
+
+            string ID = Convert.ToString(DtgGrillaMostrar.Rows[n].Cells[0].Value);
+
+            modifico.Show();
+            this.Hide();
+        }
+
+        private void DtgGrillaMostrar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

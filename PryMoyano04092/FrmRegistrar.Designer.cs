@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrar));
             this.gbregistro = new System.Windows.Forms.GroupBox();
-            this.btnborrar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btngrabar = new System.Windows.Forms.Button();
             this.txtLresponsable = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@
             this.txtjuzgado = new System.Windows.Forms.TextBox();
             this.txtapertura = new System.Windows.Forms.TextBox();
             this.txtnumero = new System.Windows.Forms.TextBox();
+            this.btnvolver = new System.Windows.Forms.Button();
             this.gbregistro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             this.gbregistro.BackgroundImage = global::PryMoyano04092.Properties.Resources.groupbox2;
             this.gbregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gbregistro.Controls.Add(this.btnborrar);
+            this.gbregistro.Controls.Add(this.btnvolver);
             this.gbregistro.Controls.Add(this.btnmodificar);
             this.gbregistro.Controls.Add(this.btngrabar);
             this.gbregistro.Controls.Add(this.txtLresponsable);
@@ -65,31 +65,19 @@
             this.gbregistro.TabIndex = 0;
             this.gbregistro.TabStop = false;
             // 
-            // btnborrar
-            // 
-            this.btnborrar.BackColor = System.Drawing.Color.Lavender;
-            this.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnborrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnborrar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnborrar.Location = new System.Drawing.Point(518, 360);
-            this.btnborrar.Name = "btnborrar";
-            this.btnborrar.Size = new System.Drawing.Size(109, 36);
-            this.btnborrar.TabIndex = 10;
-            this.btnborrar.Text = "Borrar";
-            this.btnborrar.UseVisualStyleBackColor = false;
-            // 
             // btnmodificar
             // 
             this.btnmodificar.BackColor = System.Drawing.Color.Lavender;
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnmodificar.Location = new System.Drawing.Point(337, 360);
+            this.btnmodificar.Location = new System.Drawing.Point(645, 360);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(109, 36);
             this.btnmodificar.TabIndex = 9;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = false;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btngrabar
             // 
@@ -97,7 +85,7 @@
             this.btngrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btngrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngrabar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btngrabar.Location = new System.Drawing.Point(159, 360);
+            this.btngrabar.Location = new System.Drawing.Point(457, 360);
             this.btngrabar.Name = "btngrabar";
             this.btngrabar.Size = new System.Drawing.Size(109, 36);
             this.btngrabar.TabIndex = 8;
@@ -169,6 +157,20 @@
             this.txtnumero.Size = new System.Drawing.Size(170, 22);
             this.txtnumero.TabIndex = 0;
             // 
+            // btnvolver
+            // 
+            this.btnvolver.BackColor = System.Drawing.Color.Lavender;
+            this.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnvolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvolver.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnvolver.Location = new System.Drawing.Point(6, 360);
+            this.btnvolver.Name = "btnvolver";
+            this.btnvolver.Size = new System.Drawing.Size(109, 36);
+            this.btnvolver.TabIndex = 10;
+            this.btnvolver.Text = "volver";
+            this.btnvolver.UseVisualStyleBackColor = false;
+            this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
+            // 
             // FrmRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,16 +193,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbregistro;
-        private System.Windows.Forms.Button btnborrar;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btngrabar;
-        private System.Windows.Forms.TextBox txtLresponsable;
-        private System.Windows.Forms.TextBox txtjurisdiccion;
-        private System.Windows.Forms.TextBox txtNdeexpendiente;
-        private System.Windows.Forms.TextBox txtentidad;
-        private System.Windows.Forms.TextBox txtdireccion;
-        private System.Windows.Forms.TextBox txtjuzgado;
-        private System.Windows.Forms.TextBox txtapertura;
-        private System.Windows.Forms.TextBox txtnumero;
+        public System.Windows.Forms.TextBox txtnumero;
+        public System.Windows.Forms.TextBox txtLresponsable;
+        public System.Windows.Forms.TextBox txtjurisdiccion;
+        public System.Windows.Forms.TextBox txtNdeexpendiente;
+        public System.Windows.Forms.TextBox txtentidad;
+        public System.Windows.Forms.TextBox txtdireccion;
+        public System.Windows.Forms.TextBox txtjuzgado;
+        public System.Windows.Forms.TextBox txtapertura;
+        private System.Windows.Forms.Button btnvolver;
     }
 }

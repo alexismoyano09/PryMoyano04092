@@ -38,6 +38,10 @@
             this.JURISD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnmodificar1 = new System.Windows.Forms.Button();
+            this.btnVolver1 = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btngrabar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtgGrillaMostrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +61,7 @@
             this.DtgGrillaMostrar.Name = "DtgGrillaMostrar";
             this.DtgGrillaMostrar.Size = new System.Drawing.Size(853, 426);
             this.DtgGrillaMostrar.TabIndex = 5;
+            this.DtgGrillaMostrar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgGrillaMostrar_CellContentClick);
             // 
             // Nº
             // 
@@ -98,13 +103,55 @@
             this.LR.HeaderText = "LIQUIDADOR RESPONSABLE";
             this.LR.Name = "LR";
             // 
+            // btnmodificar1
+            // 
+            this.btnmodificar1.Location = new System.Drawing.Point(708, 449);
+            this.btnmodificar1.Name = "btnmodificar1";
+            this.btnmodificar1.Size = new System.Drawing.Size(141, 41);
+            this.btnmodificar1.TabIndex = 6;
+            this.btnmodificar1.Text = "Modificar";
+            this.btnmodificar1.UseVisualStyleBackColor = true;
+            this.btnmodificar1.Click += new System.EventHandler(this.btnmodificar1_Click);
+            // 
+            // btnVolver1
+            // 
+            this.btnVolver1.Location = new System.Drawing.Point(12, 449);
+            this.btnVolver1.Name = "btnVolver1";
+            this.btnVolver1.Size = new System.Drawing.Size(141, 41);
+            this.btnVolver1.TabIndex = 7;
+            this.btnVolver1.Text = "Volver";
+            this.btnVolver1.UseVisualStyleBackColor = true;
+            this.btnVolver1.Click += new System.EventHandler(this.btnVolver1_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(561, 449);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(141, 41);
+            this.btnBorrar.TabIndex = 8;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
+            // btngrabar
+            // 
+            this.btngrabar.Location = new System.Drawing.Point(414, 449);
+            this.btngrabar.Name = "btngrabar";
+            this.btngrabar.Size = new System.Drawing.Size(141, 41);
+            this.btngrabar.TabIndex = 9;
+            this.btngrabar.Text = "Grabar";
+            this.btngrabar.UseVisualStyleBackColor = true;
+            // 
             // frmdatosgrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(871, 450);
+            this.ClientSize = new System.Drawing.Size(879, 502);
+            this.Controls.Add(this.btngrabar);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnVolver1);
+            this.Controls.Add(this.btnmodificar1);
             this.Controls.Add(this.DtgGrillaMostrar);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -126,5 +173,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn LR;
         public System.Windows.Forms.DataGridView DtgGrillaMostrar;
+        private System.Windows.Forms.Button btnmodificar1;
+        private System.Windows.Forms.Button btnVolver1;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btngrabar;
     }
 }

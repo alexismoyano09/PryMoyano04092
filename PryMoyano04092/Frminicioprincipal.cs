@@ -38,5 +38,10 @@ namespace PryMoyano04092
             Frmmain Ventana = new Frmmain();
             Ventana.ShowDialog();
         }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
