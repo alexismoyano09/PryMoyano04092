@@ -31,6 +31,7 @@ namespace PryMoyano04092
         {
             FrmRegistrar Ventana = new FrmRegistrar();
             Ventana.ShowDialog();
+            Ventana.btngrabar.Visible = true;
         }
 
         private void verProveedoresToolStripMenuItem_Click(object sender, EventArgs e)

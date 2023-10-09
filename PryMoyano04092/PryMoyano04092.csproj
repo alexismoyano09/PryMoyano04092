@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="claseCargar.cs" />
     <Compile Include="FrmGrillaMostrarDatos.cs">
       <SubType>Form</SubType>
     </Compile>

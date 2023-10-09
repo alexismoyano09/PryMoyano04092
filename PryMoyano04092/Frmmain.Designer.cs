@@ -37,7 +37,6 @@
             this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Detalle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnmostrar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -112,24 +111,13 @@
             this.splitContainer1.SplitterDistance = 354;
             this.splitContainer1.TabIndex = 3;
             // 
-            // btnmostrar
-            // 
-            this.btnmostrar.Location = new System.Drawing.Point(592, 419);
-            this.btnmostrar.Name = "btnmostrar";
-            this.btnmostrar.Size = new System.Drawing.Size(125, 41);
-            this.btnmostrar.TabIndex = 5;
-            this.btnmostrar.Text = "Mostrar";
-            this.btnmostrar.UseVisualStyleBackColor = true;
-            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
-            // 
             // Frmmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(728, 471);
-            this.Controls.Add(this.btnmostrar);
+            this.ClientSize = new System.Drawing.Size(728, 422);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -154,7 +142,6 @@
         private System.Windows.Forms.ColumnHeader Tipo;
         private System.Windows.Forms.ColumnHeader Detalle;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button btnmostrar;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

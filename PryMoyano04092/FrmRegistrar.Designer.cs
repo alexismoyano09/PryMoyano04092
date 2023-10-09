@@ -40,7 +40,6 @@
             this.txtjuzgado = new System.Windows.Forms.TextBox();
             this.txtapertura = new System.Windows.Forms.TextBox();
             this.txtnumero = new System.Windows.Forms.TextBox();
-            this.btnvolver = new System.Windows.Forms.Button();
             this.gbregistro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +47,6 @@
             // 
             this.gbregistro.BackgroundImage = global::PryMoyano04092.Properties.Resources.groupbox2;
             this.gbregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gbregistro.Controls.Add(this.btnvolver);
             this.gbregistro.Controls.Add(this.btnmodificar);
             this.gbregistro.Controls.Add(this.btngrabar);
             this.gbregistro.Controls.Add(this.txtLresponsable);
@@ -77,6 +75,7 @@
             this.btnmodificar.TabIndex = 9;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = false;
+            this.btnmodificar.Visible = false;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btngrabar
@@ -85,12 +84,13 @@
             this.btngrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btngrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngrabar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btngrabar.Location = new System.Drawing.Point(457, 360);
+            this.btngrabar.Location = new System.Drawing.Point(645, 360);
             this.btngrabar.Name = "btngrabar";
             this.btngrabar.Size = new System.Drawing.Size(109, 36);
             this.btngrabar.TabIndex = 8;
-            this.btngrabar.Text = "Grabar";
+            this.btngrabar.Text = "Cargar";
             this.btngrabar.UseVisualStyleBackColor = false;
+            this.btngrabar.Visible = false;
             this.btngrabar.Click += new System.EventHandler(this.btngrabar_Click);
             // 
             // txtLresponsable
@@ -157,20 +157,6 @@
             this.txtnumero.Size = new System.Drawing.Size(170, 22);
             this.txtnumero.TabIndex = 0;
             // 
-            // btnvolver
-            // 
-            this.btnvolver.BackColor = System.Drawing.Color.Lavender;
-            this.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnvolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvolver.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnvolver.Location = new System.Drawing.Point(6, 360);
-            this.btnvolver.Name = "btnvolver";
-            this.btnvolver.Size = new System.Drawing.Size(109, 36);
-            this.btnvolver.TabIndex = 10;
-            this.btnvolver.Text = "volver";
-            this.btnvolver.UseVisualStyleBackColor = false;
-            this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
-            // 
             // FrmRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,8 +179,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbregistro;
-        private System.Windows.Forms.Button btnmodificar;
-        private System.Windows.Forms.Button btngrabar;
         public System.Windows.Forms.TextBox txtnumero;
         public System.Windows.Forms.TextBox txtLresponsable;
         public System.Windows.Forms.TextBox txtjurisdiccion;
@@ -203,6 +187,7 @@
         public System.Windows.Forms.TextBox txtdireccion;
         public System.Windows.Forms.TextBox txtjuzgado;
         public System.Windows.Forms.TextBox txtapertura;
-        private System.Windows.Forms.Button btnvolver;
+        public System.Windows.Forms.Button btnmodificar;
+        public System.Windows.Forms.Button btngrabar;
     }
 }

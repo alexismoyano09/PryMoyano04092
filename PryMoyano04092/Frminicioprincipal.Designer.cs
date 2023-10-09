@@ -36,7 +36,6 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btncerrar = new System.Windows.Forms.Button();
-            this.btncerrar2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +50,7 @@
             this.cargarProveedoresToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1542, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,7 +91,8 @@
             // 
             this.btncerrar.BackColor = System.Drawing.Color.White;
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncerrar.Location = new System.Drawing.Point(1294, 693);
+            this.btncerrar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btncerrar.Location = new System.Drawing.Point(1409, 735);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(121, 39);
             this.btncerrar.TabIndex = 1;
@@ -100,24 +100,13 @@
             this.btncerrar.UseVisualStyleBackColor = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
-            // btncerrar2
-            // 
-            this.btncerrar2.Location = new System.Drawing.Point(1152, 699);
-            this.btncerrar2.Name = "btncerrar2";
-            this.btncerrar2.Size = new System.Drawing.Size(120, 33);
-            this.btncerrar2.TabIndex = 2;
-            this.btncerrar2.Text = "Cerrar";
-            this.btncerrar2.UseVisualStyleBackColor = true;
-            this.btncerrar2.Click += new System.EventHandler(this.btn_Click);
-            // 
             // Frminicioprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1284, 744);
-            this.Controls.Add(this.btncerrar2);
+            this.ClientSize = new System.Drawing.Size(1542, 786);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -142,6 +131,5 @@
         private System.Windows.Forms.Button btncerrar;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.Button btncerrar2;
     }
 }

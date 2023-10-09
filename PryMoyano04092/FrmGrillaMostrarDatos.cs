@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,7 @@ namespace PryMoyano04092
 
             modifico.Show();
             this.Hide();
+           modifico.btnmodificar.Visible = true;
         }
 
         private void DtgGrillaMostrar_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,8 +61,43 @@ namespace PryMoyano04092
 
             if (n != -1 ) 
             {
-              
+                string ID = Convert.ToString(DtgGrillaMostrar.Rows[n].Cells[0].Value);
+
+                List<string> Lineas = new List<string>();
+
+                using (StreamReader reader = new StreamReader(rutaArchivoGrilla))
+                {
+                    string linea;
+                    while ((linea = reader.ReadLine()) != null)
+                    {
+                        string[] parametros = linea.Split(',');
+                        if (parametros[0] != ID) 
+                        {
+                            Lineas.Add(linea);
+                        }
+
+                    }
+                }
+
+                using(StreamWriter writer = new StreamWriter(rutaArchivoGrilla))
+                {
+                    foreach (string elementro in Lineas) 
+                    {
+                      writer.WriteLine(elementro);
+                    }
+                }
+                MessageBox.Show("Se ah eliminado correctamente el registro seleccionado");
+               
+                    DtgGrillaMostrar.Rows.RemoveAt(n);
             }
+        }
+
+        private void btngrabar_Click(object sender, EventArgs e)
+        {
+            FrmRegistrar cargar = new FrmRegistrar();
+            cargar.Show();
+            this.Hide();
+            cargar.btngrabar.Visible = true;
         }
     }
 }

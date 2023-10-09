@@ -39,7 +39,6 @@
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnmodificar1 = new System.Windows.Forms.Button();
-            this.btnVolver1 = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btngrabar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtgGrillaMostrar)).BeginInit();
@@ -105,42 +104,39 @@
             // 
             // btnmodificar1
             // 
+            this.btnmodificar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificar1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnmodificar1.Location = new System.Drawing.Point(708, 449);
             this.btnmodificar1.Name = "btnmodificar1";
             this.btnmodificar1.Size = new System.Drawing.Size(141, 41);
             this.btnmodificar1.TabIndex = 6;
-            this.btnmodificar1.Text = "Modificar";
+            this.btnmodificar1.Text = "Modificar Proveedor";
             this.btnmodificar1.UseVisualStyleBackColor = true;
             this.btnmodificar1.Click += new System.EventHandler(this.btnmodificar1_Click);
             // 
-            // btnVolver1
-            // 
-            this.btnVolver1.Location = new System.Drawing.Point(12, 449);
-            this.btnVolver1.Name = "btnVolver1";
-            this.btnVolver1.Size = new System.Drawing.Size(141, 41);
-            this.btnVolver1.TabIndex = 7;
-            this.btnVolver1.Text = "Volver";
-            this.btnVolver1.UseVisualStyleBackColor = true;
-            this.btnVolver1.Click += new System.EventHandler(this.btnVolver1_Click);
-            // 
             // btnBorrar
             // 
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnBorrar.Location = new System.Drawing.Point(561, 449);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(141, 41);
             this.btnBorrar.TabIndex = 8;
-            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.Text = "Borrar Proveedor";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btngrabar
             // 
+            this.btngrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngrabar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btngrabar.Location = new System.Drawing.Point(414, 449);
             this.btngrabar.Name = "btngrabar";
             this.btngrabar.Size = new System.Drawing.Size(141, 41);
             this.btngrabar.TabIndex = 9;
-            this.btngrabar.Text = "Grabar";
+            this.btngrabar.Text = "Cargar Proveedor";
             this.btngrabar.UseVisualStyleBackColor = true;
+            this.btngrabar.Click += new System.EventHandler(this.btngrabar_Click);
             // 
             // frmdatosgrilla
             // 
@@ -151,7 +147,6 @@
             this.ClientSize = new System.Drawing.Size(879, 502);
             this.Controls.Add(this.btngrabar);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnVolver1);
             this.Controls.Add(this.btnmodificar1);
             this.Controls.Add(this.DtgGrillaMostrar);
             this.DoubleBuffered = true;
@@ -175,7 +170,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LR;
         public System.Windows.Forms.DataGridView DtgGrillaMostrar;
         private System.Windows.Forms.Button btnmodificar1;
-        private System.Windows.Forms.Button btnVolver1;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btngrabar;
     }

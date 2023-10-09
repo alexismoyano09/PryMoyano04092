@@ -20,26 +20,36 @@ namespace PryMoyano04092
             InitializeComponent();
         }
 
-      
-       
 
+
+        claseCargar Cargar = new claseCargar();
         private void btngrabar_Click(object sender, EventArgs e)
         {
-            FrmRegistrar FrmRegistrar = new FrmRegistrar();
+            Cargar.Grabar(txtnumero.Text, txtentidad.Text, txtapertura.Text, txtNdeexpendiente.Text, txtjuzgado.Text, txtjurisdiccion.Text, txtdireccion.Text, txtLresponsable.Text);
+            MessageBox.Show("Se ah cargado el proveedor");
+            txtnumero.Text = "";
+            txtentidad.Text = "";
+            txtapertura.Text = "";
+            txtNdeexpendiente.Text = "";
+            txtjuzgado.Text = "";
+            txtjurisdiccion.Text = "";
+            txtdireccion.Text = "";
+            txtLresponsable.Text = "";
+            //FrmRegistrar FrmRegistrar = new FrmRegistrar();
 
-            
-           // int contadoraDeFilas = DtgGrillaMostrar.Rows.Count;
+
+            // int contadoraDeFilas = DtgGrillaMostrar.Rows.Count;
             //string ultimoNumero = DtgGrillaMostrar.Rows[contadoraDeFilas - 1].Cells[0].Value.ToString();
             //int numeroDelTxt = Convert.ToInt32(ultimoNumero) + 1;
-         //   FrmRegistrar.txtnumero.Text = numeroDelTxt.ToString();
-           // FrmRegistrar.txtnumero.ReadOnly = true;
+            //   FrmRegistrar.txtnumero.Text = numeroDelTxt.ToString();
+            // FrmRegistrar.txtnumero.ReadOnly = true;
 
 
             //FrmRegistrar.btnmodificar.Visible = false;
-            FrmRegistrar.btngrabar.Visible = true;
+            // FrmRegistrar.btngrabar.Visible = true;
             //FrmRegistrar.rutaArchivoAbm = rutaArchivoGrilla;
-            FrmRegistrar.Show();
-            this.Hide();
+            // FrmRegistrar.Show();
+            //this.Hide();
         }
         public static string rutafinal;
         private void btnmodificar_Click(object sender, EventArgs e)
