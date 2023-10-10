@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PryMoyano04092
 {
     internal class claseCargar
     {
-        public static string RutaFull;
+        public static string rutafinal;
 
         public void Grabar(string numero, string entidad, string apertura, string Nexpediente, string juzgado, string jurisdiccion, string direccion, string liquidador)
         {
@@ -20,9 +21,9 @@ namespace PryMoyano04092
 
 
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
-            string ruta = info.Name;
+            string rutaArchivoFinal = info.Name;
 
-            StreamWriter Listado = new StreamWriter((ruta + "/" + RutaFull), true);
+            StreamWriter Listado = new StreamWriter((rutaArchivoFinal + "/" + rutafinal), true);
             Listado.Write(numero);
             Listado.Write(";");
             Listado.Write(entidad);

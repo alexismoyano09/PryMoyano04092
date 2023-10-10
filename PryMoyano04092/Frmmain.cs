@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PryMoyano04092
 {
@@ -127,10 +128,13 @@ namespace PryMoyano04092
 
 
         }
-
-        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        
+        public string rutaArchivoFinal;
+        public string nombreArchivo;
+        public void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             
+
             string i = lstvista.SelectedItems[0].Text.ToString();
             
             
@@ -138,11 +142,13 @@ namespace PryMoyano04092
 
                
             string rutaArchivoFinal = Path.Combine(@"../../" + "Resources", rutaArchivoParcial);
+            nombreArchivo = lstvista.SelectedItems[0].Text;
 
+            
             FrmRegistrar.rutafinal = rutaArchivoFinal;
             frmdatosgrilla frmdatosgrilla = new frmdatosgrilla();
+            claseCargar.rutafinal = nombreArchivo + rutaArchivoFinal;
 
-           
             using (StreamReader reader = new StreamReader(rutaArchivoFinal))
             {
                 
