@@ -21,7 +21,7 @@ namespace PryMoyano04092
 
 
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
-            string rutaArchivoFinal = info.Name;
+            string rutaArchivoFinal = info.FullName + "/Listado de aseguradores.csv";
 
             StreamWriter Listado = new StreamWriter((rutaArchivoFinal), true); //+ "/" + rutafinal), true);
             Listado.Write(numero);

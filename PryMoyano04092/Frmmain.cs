@@ -166,8 +166,13 @@ namespace PryMoyano04092
             }
             frmdatosgrilla.rutaArchivoGrilla = rutaArchivoFinal;
 
-            frmdatosgrilla.Show();
+            frmdatosgrilla.ShowDialog();
             this.Hide();
+        }
+
+        private void Frmmain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

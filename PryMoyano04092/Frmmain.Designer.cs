@@ -124,6 +124,7 @@
             this.Name = "Frmmain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Proveedores";
+            this.Load += new System.EventHandler(this.Frmmain_Load);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Frmmain_MouseDoubleClick);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
