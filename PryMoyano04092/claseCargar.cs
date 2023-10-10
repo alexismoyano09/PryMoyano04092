@@ -23,7 +23,7 @@ namespace PryMoyano04092
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             string rutaArchivoFinal = info.Name;
 
-            StreamWriter Listado = new StreamWriter((rutaArchivoFinal + "/" + rutafinal), true);
+            StreamWriter Listado = new StreamWriter((rutaArchivoFinal), true); //+ "/" + rutafinal), true);
             Listado.Write(numero);
             Listado.Write(";");
             Listado.Write(entidad);

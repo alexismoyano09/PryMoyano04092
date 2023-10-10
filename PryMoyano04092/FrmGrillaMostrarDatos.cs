@@ -46,7 +46,7 @@ namespace PryMoyano04092
             string ID = Convert.ToString(DtgGrillaMostrar.Rows[n].Cells[0].Value);
 
             modifico.Show();
-            this.Hide();
+            //this.Hide();
            modifico.btnmodificar.Visible = true;
         }
 
@@ -96,7 +96,7 @@ namespace PryMoyano04092
         {
             FrmRegistrar cargar = new FrmRegistrar();
             cargar.Show();
-            this.Hide();
+            //this.Hide();
             cargar.btngrabar.Visible = true;
         }
     }
