@@ -59,6 +59,7 @@
             this.btniniciar.TabIndex = 2;
             this.btniniciar.Text = "Iniciar Sesion";
             this.btniniciar.UseVisualStyleBackColor = true;
+            this.btniniciar.Click += new System.EventHandler(this.btniniciar_Click);
             // 
             // btnregistrarse
             // 
@@ -85,6 +86,7 @@
             this.Name = "Frminiciodesesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicia Sesion";
+            this.Load += new System.EventHandler(this.Frminiciodesesion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

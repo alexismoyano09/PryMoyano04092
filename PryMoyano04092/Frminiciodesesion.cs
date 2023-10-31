@@ -16,5 +16,32 @@ namespace PryMoyano04092
         {
             InitializeComponent();
         }
+
+        private void Frminiciodesesion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btniniciar_Click(object sender, EventArgs e)
+        {
+            Cliniciodesesion objUsuario = new Cliniciodesesion();
+
+            objUsuario.ValidarUsuario(txtusuario.Text, txtcontraseña.Text);
+
+            if (objUsuario.estadoConexion == "Usuario EXISTE")
+            {
+               
+                //MessageBox.Show("Ingrese al sistema...");
+                objUsuario.RegistroLogInicioSesion();
+                this.Hide();
+                Frminicioprincipal Frminicioprincipal = new Frminicioprincipal();
+                Frminicioprincipal.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario incorrecto");
+                objUsuario.RegistroLogInicioSesion();
+            }
+        }
     }
 }

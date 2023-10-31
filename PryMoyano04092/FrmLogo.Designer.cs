@@ -84,6 +84,7 @@
             this.Name = "FrmLogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eslogan";
+            this.Load += new System.EventHandler(this.FrmLogo_Load);
             this.ResumeLayout(false);
 
         }

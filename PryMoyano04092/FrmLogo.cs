@@ -26,8 +26,8 @@ namespace PryMoyano04092
             {
                 timer1.Stop();
                 this.Hide();
-                Frminicioprincipal frminicioprincipal = new Frminicioprincipal();
-                frminicioprincipal.Show();
+                Frminiciodesesion Frminiciodesesion = new Frminiciodesesion();
+                Frminiciodesesion.Show();
             }
 
 
@@ -39,6 +39,11 @@ namespace PryMoyano04092
         }
 
         private void lblporcentaje_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLogo_Load(object sender, EventArgs e)
         {
 
         }
