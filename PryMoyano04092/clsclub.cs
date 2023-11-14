@@ -9,6 +9,7 @@ using System.Data;
 using System.Security.Cryptography.X509Certificates;
 using System.Data.OleDb;
 using System.ComponentModel.Design;
+using System.Reflection;
 
 namespace PryMoyano04092
 {
@@ -148,6 +149,87 @@ namespace PryMoyano04092
             catch(Exception EX) 
             {
                 estadoConexion = "error" + EX.Message;
+            }
+        }
+
+        public void BuscarPorid(int IDsocio, DataGridView Grilla)
+        {
+            comandoBD = new OleDbCommand();
+            
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            comandoBD.CommandText = "SOCIOS";
+
+            lectorBD = comandoBD.ExecuteReader();
+
+            if (lectorBD.HasRows) 
+            {
+                bool idusuario = false;
+                while (lectorBD.Read())
+                {
+                    if (int.Parse(lectorBD[0].ToString()) == IDsocio)
+                    {
+                        MessageBox.Show("existe", "consulta",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        idusuario = true;
+                        
+                    }
+                    Grilla.Rows.Clear();
+                    Grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7], lectorBD[8]);
+                    idusuario = true;
+                    
+                    break;
+
+                }
+
+                if (idusuario == false)
+                {
+                    MessageBox.Show("No Existe",
+                        "Consulta",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+        }
+        public void BuscarPorApellido(string apellido, DataGridView Grilla)
+        {
+            comandoBD = new OleDbCommand();
+
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            comandoBD.CommandText = "SOCIOS";
+
+            lectorBD = comandoBD.ExecuteReader();
+
+            if (lectorBD.HasRows)
+            {
+                bool idusuario = false;
+                while (lectorBD.Read())
+                {
+                    if (lectorBD[2].ToString() == apellido)
+                    {
+                        MessageBox.Show("existe", "consulta",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        idusuario = true;
+
+                    }
+                    Grilla.Rows.Clear();
+                    Grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7], lectorBD[8]);
+                    idusuario = true;
+                    
+                    break;
+
+                }
+
+                if (idusuario == false)
+                {
+                    MessageBox.Show("No Existe",
+                        "Consulta",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
     }

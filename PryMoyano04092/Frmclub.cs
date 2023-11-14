@@ -26,5 +26,15 @@ namespace PryMoyano04092
             lblestado1.ForeColor = Color.MidnightBlue;
             objbasededatos.MostrarDatos(dgvgrillasocios);
         }
+
+        private void btnbuscarclub_Click(object sender, EventArgs e)
+        {
+            objbasededatos.BuscarPorid(int.Parse(txtID.Text), dgvgrillasocios);
+        }
+
+        private void btnbuscarapellido_Click(object sender, EventArgs e)
+        {
+            objbasededatos.BuscarPorApellido(txtApellido.Text, dgvgrillasocios);
+        }
     }
 }
