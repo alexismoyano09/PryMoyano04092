@@ -127,6 +127,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__2_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(930, 516);
             this.Controls.Add(this.btnbuscarapellido);
             this.Controls.Add(this.btnbuscarclub);
@@ -136,6 +138,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblestado1);
             this.Controls.Add(this.dgvgrillasocios);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmclub";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
