@@ -117,7 +117,7 @@ namespace PryMoyano04092
 
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
-                comandoBD.CommandText = "Usuario";
+                comandoBD.CommandText = "USERS";
 
                 lectorBD = comandoBD.ExecuteReader();
 
@@ -128,6 +128,7 @@ namespace PryMoyano04092
                         if (lectorBD[1].ToString() == Frminiciodesesion.usuario && lectorBD[2].ToString() == Frminiciodesesion.contraseña)
                         {
                             estadoConexion = "Usuario EXISTE";
+                            acceso = true;
                         }
                     }
                 }

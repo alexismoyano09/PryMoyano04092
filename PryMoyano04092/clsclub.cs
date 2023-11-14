@@ -167,19 +167,20 @@ namespace PryMoyano04092
                 bool idusuario = false;
                 while (lectorBD.Read())
                 {
-                    if (int.Parse(lectorBD[0].ToString()) == IDsocio)
+                    if (int.Parse(lectorBD[0].ToString()) ==  IDsocio)
                     {
                         MessageBox.Show("existe", "consulta",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         idusuario = true;
                         
-                    }
-                    Grilla.Rows.Clear();
-                    Grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7], lectorBD[8]);
-                    idusuario = true;
+                        Grilla.Rows.Clear();
+                        Grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7], lectorBD[8]);
+                        idusuario = true;
                     
-                    break;
+                        break;
+                    }
+                
 
                 }
 
@@ -214,12 +215,13 @@ namespace PryMoyano04092
                             MessageBoxIcon.Information);
                         idusuario = true;
 
+                        Grilla.Rows.Clear();
+                        Grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7], lectorBD[8]);
+                        idusuario = true;
+
+                        break;
                     }
-                    Grilla.Rows.Clear();
-                    Grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7], lectorBD[8]);
-                    idusuario = true;
                     
-                    break;
 
                 }
 
