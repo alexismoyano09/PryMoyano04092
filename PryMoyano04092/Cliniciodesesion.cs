@@ -79,7 +79,7 @@ namespace PryMoyano04092
 
         }
 
-        public void ValidarUsuario(string nombreUser, string passUser)
+        public void ValidarUsuario(string nombre, string contraseña)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace PryMoyano04092
                 {
                     while (lectorBD.Read())
                     {
-                        if (lectorBD[1].ToString() ==nombreUser && lectorBD[2].ToString() == passUser)
+                        if (lectorBD[1].ToString() ==nombre && lectorBD[2].ToString() == contraseña)
                         {
                             estadoConexion = "Usuario EXISTE";
                         }

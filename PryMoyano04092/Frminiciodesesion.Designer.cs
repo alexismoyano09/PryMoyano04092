@@ -33,6 +33,8 @@
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.btniniciar = new System.Windows.Forms.Button();
             this.btnregistrarse = new System.Windows.Forms.Button();
+            this.lblestado = new System.Windows.Forms.Label();
+            this.CBmostrar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtusuario
@@ -53,7 +55,7 @@
             // 
             // btniniciar
             // 
-            this.btniniciar.Location = new System.Drawing.Point(418, 235);
+            this.btniniciar.Location = new System.Drawing.Point(418, 240);
             this.btniniciar.Name = "btniniciar";
             this.btniniciar.Size = new System.Drawing.Size(148, 29);
             this.btniniciar.TabIndex = 2;
@@ -63,12 +65,34 @@
             // 
             // btnregistrarse
             // 
-            this.btnregistrarse.Location = new System.Drawing.Point(418, 323);
+            this.btnregistrarse.Location = new System.Drawing.Point(418, 311);
             this.btnregistrarse.Name = "btnregistrarse";
             this.btnregistrarse.Size = new System.Drawing.Size(148, 29);
             this.btnregistrarse.TabIndex = 3;
             this.btnregistrarse.Text = "Registrarse";
             this.btnregistrarse.UseVisualStyleBackColor = true;
+            // 
+            // lblestado
+            // 
+            this.lblestado.AutoSize = true;
+            this.lblestado.BackColor = System.Drawing.Color.Transparent;
+            this.lblestado.Location = new System.Drawing.Point(643, 425);
+            this.lblestado.Name = "lblestado";
+            this.lblestado.Size = new System.Drawing.Size(35, 13);
+            this.lblestado.TabIndex = 4;
+            this.lblestado.Text = "label1";
+            // 
+            // CBmostrar
+            // 
+            this.CBmostrar.AutoSize = true;
+            this.CBmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBmostrar.Location = new System.Drawing.Point(526, 217);
+            this.CBmostrar.Name = "CBmostrar";
+            this.CBmostrar.Size = new System.Drawing.Size(107, 16);
+            this.CBmostrar.TabIndex = 5;
+            this.CBmostrar.Text = "Mostrar Contraseña";
+            this.CBmostrar.UseVisualStyleBackColor = true;
+            this.CBmostrar.CheckedChanged += new System.EventHandler(this.CBmostrar_CheckedChanged);
             // 
             // Frminiciodesesion
             // 
@@ -77,6 +101,8 @@
             this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__3_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CBmostrar);
+            this.Controls.Add(this.lblestado);
             this.Controls.Add(this.btnregistrarse);
             this.Controls.Add(this.btniniciar);
             this.Controls.Add(this.txtcontraseña);
@@ -98,5 +124,7 @@
         private System.Windows.Forms.TextBox txtcontraseña;
         private System.Windows.Forms.Button btniniciar;
         private System.Windows.Forms.Button btnregistrarse;
+        private System.Windows.Forms.Label lblestado;
+        private System.Windows.Forms.CheckBox CBmostrar;
     }
 }

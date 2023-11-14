@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace PryMoyano04092
 {
@@ -19,7 +20,8 @@ namespace PryMoyano04092
 
         private void Frminiciodesesion_Load(object sender, EventArgs e)
         {
-
+            Cliniciodesesion objEstado = new Cliniciodesesion();
+            lblestado.Text = objEstado.estadoConexion;
         }
 
         private void btniniciar_Click(object sender, EventArgs e)
@@ -41,6 +43,18 @@ namespace PryMoyano04092
             {
                 MessageBox.Show("Usuario incorrecto");
                 objUsuario.RegistroLogInicioSesion();
+            }
+        }
+
+        private void CBmostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CBmostrar.Checked)
+            {
+                txtcontraseña.PasswordChar = '\0';
+            }
+            else
+            {
+                txtcontraseña.PasswordChar = '*';
             }
         }
     }
