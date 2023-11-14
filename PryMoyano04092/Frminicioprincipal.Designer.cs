@@ -35,6 +35,9 @@
             this.verProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.elCLUBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.btncerrar = new System.Windows.Forms.Button();
             this.lbldate = new System.Windows.Forms.Label();
             this.lbltime = new System.Windows.Forms.Label();
@@ -49,7 +52,10 @@
             this.cargarProveedoresToolStripMenuItem,
             this.verProveedoresToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.cargarProveedoresToolStripMenuItem1});
+            this.cargarProveedoresToolStripMenuItem1,
+            this.toolStripMenuItem3,
+            this.elCLUBToolStripMenuItem,
+            this.toolStripMenuItem4});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1542, 24);
@@ -88,6 +94,25 @@
             this.cargarProveedoresToolStripMenuItem1.Size = new System.Drawing.Size(122, 20);
             this.cargarProveedoresToolStripMenuItem1.Text = "Cargar Proveedores";
             this.cargarProveedoresToolStripMenuItem1.Click += new System.EventHandler(this.cargarProveedoresToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem3.Text = "|";
+            // 
+            // elCLUBToolStripMenuItem
+            // 
+            this.elCLUBToolStripMenuItem.Name = "elCLUBToolStripMenuItem";
+            this.elCLUBToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.elCLUBToolStripMenuItem.Text = "El CLUB";
+            this.elCLUBToolStripMenuItem.Click += new System.EventHandler(this.elCLUBToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem4.Text = "|";
             // 
             // btncerrar
             // 
@@ -164,5 +189,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Label lbltime;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem elCLUBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
     }
 }

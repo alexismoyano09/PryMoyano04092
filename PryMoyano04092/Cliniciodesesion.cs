@@ -141,48 +141,7 @@ namespace PryMoyano04092
 
         }
 
-        public void Registrarusuarionuevo()
-        {
-           
-           Frmregistrarusuario nombre = new Frmregistrarusuario();
-            Frmregistrarusuario contraseña = new Frmregistrarusuario();
-            Frmregistrarusuario perfil = new Frmregistrarusuario();
-
-            try
-            {
-                comandoBD = new OleDbCommand();
-
-                comandoBD.Connection = conexionBD;
-                comandoBD.CommandType = System.Data.CommandType.TableDirect;
-                comandoBD.CommandText = "USERS";
-
-                adaptadorBD = new OleDbDataAdapter(comandoBD);
-
-                adaptadorBD.Fill(objDS, "USERS");
-
-                DataTable objTabla = objDS.Tables["USERS"];
-                DataRow nuevoRegistro = objTabla.NewRow();
-
-                nuevoRegistro["nombreUsuario"] = nombre;
-                nuevoRegistro["contraseña"] = contraseña;
-                nuevoRegistro["perfil"] = perfil;
-
-                objTabla.Rows.Add(nuevoRegistro);
-
-                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-                adaptadorBD.Update(objDS, "USERS");
-
-                MessageBox.Show("registrado correctamente");
-                estadoConexion = "Registro fallos de inicio de sesion";
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("error al registrar");
-                estadoConexion = error.Message;
-            }
-
-
-        }
+       
 
     
         public void RegistroLogInicioFallidoSesion()

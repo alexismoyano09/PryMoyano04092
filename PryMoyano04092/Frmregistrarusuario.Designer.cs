@@ -34,11 +34,12 @@
             this.txtcontraseña1 = new System.Windows.Forms.TextBox();
             this.CBmostrar = new System.Windows.Forms.CheckBox();
             this.txtperfil = new System.Windows.Forms.TextBox();
+            this.txtcontraseña2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnregistrarse1
             // 
-            this.btnregistrarse1.Location = new System.Drawing.Point(416, 325);
+            this.btnregistrarse1.Location = new System.Drawing.Point(405, 353);
             this.btnregistrarse1.Name = "btnregistrarse1";
             this.btnregistrarse1.Size = new System.Drawing.Size(148, 29);
             this.btnregistrarse1.TabIndex = 4;
@@ -59,7 +60,7 @@
             // txtcontraseña1
             // 
             this.txtcontraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontraseña1.Location = new System.Drawing.Point(487, 185);
+            this.txtcontraseña1.Location = new System.Drawing.Point(487, 183);
             this.txtcontraseña1.Multiline = true;
             this.txtcontraseña1.Name = "txtcontraseña1";
             this.txtcontraseña1.Size = new System.Drawing.Size(153, 28);
@@ -71,7 +72,7 @@
             // 
             this.CBmostrar.AutoSize = true;
             this.CBmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBmostrar.Location = new System.Drawing.Point(487, 219);
+            this.CBmostrar.Location = new System.Drawing.Point(487, 261);
             this.CBmostrar.Name = "CBmostrar";
             this.CBmostrar.Size = new System.Drawing.Size(107, 16);
             this.CBmostrar.TabIndex = 7;
@@ -82,21 +83,32 @@
             // txtperfil
             // 
             this.txtperfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtperfil.Location = new System.Drawing.Point(487, 250);
+            this.txtperfil.Location = new System.Drawing.Point(487, 283);
             this.txtperfil.Multiline = true;
             this.txtperfil.Name = "txtperfil";
             this.txtperfil.Size = new System.Drawing.Size(153, 28);
             this.txtperfil.TabIndex = 8;
             this.txtperfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtcontraseña2
+            // 
+            this.txtcontraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcontraseña2.Location = new System.Drawing.Point(536, 227);
+            this.txtcontraseña2.Multiline = true;
+            this.txtcontraseña2.Name = "txtcontraseña2";
+            this.txtcontraseña2.Size = new System.Drawing.Size(153, 28);
+            this.txtcontraseña2.TabIndex = 9;
+            this.txtcontraseña2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Frmregistrarusuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__1_1;
+            this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__2_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtcontraseña2);
             this.Controls.Add(this.txtperfil);
             this.Controls.Add(this.CBmostrar);
             this.Controls.Add(this.txtcontraseña1);
@@ -105,7 +117,9 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmregistrarusuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Usuario";
+            this.Load += new System.EventHandler(this.Frmregistrarusuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +132,6 @@
         public System.Windows.Forms.TextBox txtusuario1;
         public System.Windows.Forms.TextBox txtcontraseña1;
         public System.Windows.Forms.TextBox txtperfil;
+        public System.Windows.Forms.TextBox txtcontraseña2;
     }
 }

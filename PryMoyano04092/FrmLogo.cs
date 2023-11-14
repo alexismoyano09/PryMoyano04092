@@ -26,8 +26,10 @@ namespace PryMoyano04092
             {
                 timer1.Stop();
                 this.Hide();
-                Frminiciodesesion Frminiciodesesion = new Frminiciodesesion();
-                Frminiciodesesion.Show();
+                 Frminicioprincipal Frminicioprincipal = new Frminicioprincipal();
+                Frminicioprincipal.Show();
+                // Frminiciodesesion Frminiciodesesion = new Frminiciodesesion();
+                //Frminiciodesesion.Show();
             }
 
 

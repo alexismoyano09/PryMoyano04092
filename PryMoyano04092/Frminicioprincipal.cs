@@ -72,5 +72,12 @@ namespace PryMoyano04092
         {
 
         }
+
+        private void elCLUBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frmclub club = new Frmclub();
+            club.ShowDialog();
+            
+        }
     }
 }

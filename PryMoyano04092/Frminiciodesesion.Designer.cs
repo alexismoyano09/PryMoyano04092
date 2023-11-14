@@ -83,7 +83,7 @@
             // 
             this.lblestado.AutoSize = true;
             this.lblestado.BackColor = System.Drawing.Color.Transparent;
-            this.lblestado.Location = new System.Drawing.Point(643, 425);
+            this.lblestado.Location = new System.Drawing.Point(729, 428);
             this.lblestado.Name = "lblestado";
             this.lblestado.Size = new System.Drawing.Size(35, 13);
             this.lblestado.TabIndex = 4;
