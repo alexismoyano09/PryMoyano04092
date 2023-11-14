@@ -77,6 +77,7 @@
             this.btnmodificar.UseVisualStyleBackColor = false;
             this.btnmodificar.Visible = false;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
+            this.btnmodificar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnmodificar_KeyDown);
             // 
             // btngrabar
             // 
@@ -170,6 +171,7 @@
             this.Name = "FrmRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registra un nuevo Proveedor";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmRegistrar_KeyDown);
             this.gbregistro.ResumeLayout(false);
             this.gbregistro.PerformLayout();
             this.ResumeLayout(false);

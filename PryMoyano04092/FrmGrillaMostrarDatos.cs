@@ -99,5 +99,12 @@ namespace PryMoyano04092
             //this.Hide();
             cargar.btngrabar.Visible = true;
         }
+
+        private void frmdatosgrilla_KeyDown(object sender, KeyEventArgs e)
+        {
+            frmdatosgrilla volver = new frmdatosgrilla();
+            volver.Show();
+            this.Hide();
+        }
     }
 }

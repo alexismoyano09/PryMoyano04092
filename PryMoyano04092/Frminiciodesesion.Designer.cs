@@ -39,19 +39,25 @@
             // 
             // txtusuario
             // 
+            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.Location = new System.Drawing.Point(526, 121);
             this.txtusuario.Multiline = true;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(153, 28);
             this.txtusuario.TabIndex = 0;
+            this.txtusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtcontraseña
             // 
+            this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcontraseña.Location = new System.Drawing.Point(526, 183);
             this.txtcontraseña.Multiline = true;
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.Size = new System.Drawing.Size(153, 28);
             this.txtcontraseña.TabIndex = 1;
+            this.txtcontraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcontraseña.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
+            this.txtcontraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcontraseña_KeyDown);
             // 
             // btniniciar
             // 
@@ -65,12 +71,13 @@
             // 
             // btnregistrarse
             // 
-            this.btnregistrarse.Location = new System.Drawing.Point(418, 311);
+            this.btnregistrarse.Location = new System.Drawing.Point(418, 319);
             this.btnregistrarse.Name = "btnregistrarse";
             this.btnregistrarse.Size = new System.Drawing.Size(148, 29);
             this.btnregistrarse.TabIndex = 3;
             this.btnregistrarse.Text = "Registrarse";
             this.btnregistrarse.UseVisualStyleBackColor = true;
+            this.btnregistrarse.Click += new System.EventHandler(this.btnregistrarse_Click);
             // 
             // lblestado
             // 
@@ -113,6 +120,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicia Sesion";
             this.Load += new System.EventHandler(this.Frminiciodesesion_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frminiciodesesion_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

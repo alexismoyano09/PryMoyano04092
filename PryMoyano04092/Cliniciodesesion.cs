@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.Data.OleDb;
 using System.Data;
+using System.Windows.Forms;
 
 namespace PryMoyano04092
 {
@@ -20,12 +21,12 @@ namespace PryMoyano04092
 
         string rutaArchivo;
         public string estadoConexion;
-
+        public static bool acceso;
         public Cliniciodesesion()
         {
             try
             {
-                rutaArchivo = @"../../Archivos/BDusuarios.accdb";
+                rutaArchivo = @"../../Archivos/EL_CLUB.accdb";
                 conexionBD = new OleDbConnection();
                 conexionBD.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + rutaArchivo;
                 conexionBD.Open();
@@ -44,30 +45,30 @@ namespace PryMoyano04092
         {
             try
             {
-            
+
                 comandoBD = new OleDbCommand();
 
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
-                comandoBD.CommandText = "Logs";
+                comandoBD.CommandText = "LOGS";
 
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
 
                 objDS = new DataSet();
 
-                adaptadorBD.Fill(objDS, "Logs");
+                adaptadorBD.Fill(objDS, "LOGS");
 
-                DataTable objTabla = objDS.Tables["Logs"];
+                DataTable objTabla = objDS.Tables["LOGS"];
                 DataRow nuevoRegistro = objTabla.NewRow();
 
-                nuevoRegistro["Categoria"] = "Inicio Sesión";
-                nuevoRegistro["FechaHora"] = DateTime.Now;
-                nuevoRegistro["Descripcion"] = "Inicio exitoso";
+                nuevoRegistro["USUARIO"] = "Inicio Sesión";
+                nuevoRegistro["FECHA"] = DateTime.Now;
+                nuevoRegistro["ACCION"] = "Inicio exitoso";
 
                 objTabla.Rows.Add(nuevoRegistro);
 
                 OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-                adaptadorBD.Update(objDS,"Logs");
+                adaptadorBD.Update(objDS, "LOGS");
 
                 estadoConexion = "Registro exitoso de log";
             }
@@ -81,11 +82,38 @@ namespace PryMoyano04092
 
         public void ValidarUsuario(string nombre, string contraseña)
         {
+            // try
+            //{
+            //  conexionBD.Open();
+
+            //comandoBD = new OleDbCommand();
+
+            //comandoBD.Connection = conexionBD;
+            //comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            //comandoBD.CommandText = "Usuario";
+
+            //lectorBD = comandoBD.ExecuteReader();
+
+            //if (lectorBD.HasRows)
+            //{
+            //  while (lectorBD.Read())
+            //{
+            //  string usuarioBD = lectorBD[1].ToString();
+            //string contraseñaBD = lectorBD[2].ToString();
+            // if (usuarioBD == Frminiciodesesion.usuario & contraseñaBD == Frminiciodesesion.contraseña)
+            //{
+            //  acceso = true;
+            // break;
+            //}
+            //else
+            //{
+            //  acceso = false;
+            //}
+            //}
+            //}
             try
             {
                 comandoBD = new OleDbCommand();
-                
-                conexionBD.Open();
 
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
@@ -97,13 +125,166 @@ namespace PryMoyano04092
                 {
                     while (lectorBD.Read())
                     {
-                        if (lectorBD[1].ToString() ==nombre && lectorBD[2].ToString() == contraseña)
+                        if (lectorBD[1].ToString() == Frminiciodesesion.usuario && lectorBD[2].ToString() == Frminiciodesesion.contraseña)
                         {
                             estadoConexion = "Usuario EXISTE";
                         }
                     }
                 }
-                                
+
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+        }
+
+        public void Registrarusuarionuevo()
+        {
+           
+           Frmregistrarusuario nombre = new Frmregistrarusuario();
+            Frmregistrarusuario contraseña = new Frmregistrarusuario();
+            Frmregistrarusuario perfil = new Frmregistrarusuario();
+
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "USERS";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "USERS");
+
+                DataTable objTabla = objDS.Tables["USERS"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["nombreUsuario"] = nombre;
+                nuevoRegistro["contraseña"] = contraseña;
+                nuevoRegistro["perfil"] = perfil;
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "USERS");
+
+                MessageBox.Show("registrado correctamente");
+                estadoConexion = "Registro fallos de inicio de sesion";
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("error al registrar");
+                estadoConexion = error.Message;
+            }
+
+
+        }
+
+    
+        public void RegistroLogInicioFallidoSesion()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "LOGS";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "LOGS");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["USUARIO"] = "usuario";
+                nuevoRegistro["FECHA"] = DateTime.Now;
+                nuevoRegistro["ACCION"] = "error al iniciar";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "LOGS");
+
+                estadoConexion = "Registro fallos de inicio de sesion";
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+        }
+
+        public void RegistroLogIngresoAlSistema()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "LOGS";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "LOGS");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["USUARIO"] = "usuario";
+                nuevoRegistro["FECHA"] = DateTime.Now;
+                nuevoRegistro["ACCION"] = "ingreso menu";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "LOGS");
+
+                estadoConexion = "ingreso menu";
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+
+        }
+
+        public void RegistroLogInicioSesionProveedores()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "LOGS";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "LOGS");
+
+                DataTable objTabla = objDS.Tables["LOGS"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["USUARIO"] = "usuario";
+                nuevoRegistro["FECHA"] = DateTime.Now;
+                nuevoRegistro["ACCION"] = "Inicio exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "LOGS");
+
+                estadoConexion = "Registro exitoso ";
             }
             catch (Exception error)
             {
@@ -111,5 +292,8 @@ namespace PryMoyano04092
                 estadoConexion = error.Message;
             }
         }
+
+       
+        
     }
 }

@@ -36,6 +36,8 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btncerrar = new System.Windows.Forms.Button();
+            this.lbldate = new System.Windows.Forms.Label();
+            this.lbltime = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +102,31 @@
             this.btncerrar.UseVisualStyleBackColor = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
+            // lbldate
+            // 
+            this.lbldate.BackColor = System.Drawing.Color.Transparent;
+            this.lbldate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldate.ForeColor = System.Drawing.Color.Navy;
+            this.lbldate.Location = new System.Drawing.Point(205, 740);
+            this.lbldate.Name = "lbldate";
+            this.lbldate.Size = new System.Drawing.Size(160, 34);
+            this.lbldate.TabIndex = 2;
+            this.lbldate.Text = "label1";
+            this.lbldate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbldate.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lbltime
+            // 
+            this.lbltime.BackColor = System.Drawing.Color.Transparent;
+            this.lbltime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime.ForeColor = System.Drawing.Color.Navy;
+            this.lbltime.Location = new System.Drawing.Point(23, 742);
+            this.lbltime.Name = "lbltime";
+            this.lbltime.Size = new System.Drawing.Size(160, 30);
+            this.lbltime.TabIndex = 3;
+            this.lbltime.Text = "label1";
+            this.lbltime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Frminicioprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +134,8 @@
             this.BackgroundImage = global::PryMoyano04092.Properties.Resources.PACIFÍCO_SEGUROS__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1542, 786);
+            this.Controls.Add(this.lbltime);
+            this.Controls.Add(this.lbldate);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -115,6 +144,8 @@
             this.Name = "Frminicioprincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "¡BIENVENIDOS!";
+            this.Load += new System.EventHandler(this.Frminicioprincipal_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frminicioprincipal_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -131,5 +162,7 @@
         private System.Windows.Forms.Button btncerrar;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.Label lbldate;
+        private System.Windows.Forms.Label lbltime;
     }
 }

@@ -89,5 +89,47 @@ namespace PryMoyano04092
             volver.Show();
             this.Hide();
         }
+
+        private void btnmodificar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter) 
+            {
+                string ID = txtnumero.Text;
+                List<string> LineaArchivo = new List<string>();
+
+                using (StreamReader leer = new StreamReader(rutafinal))
+                {
+                    string line;
+                    while ((line = leer.ReadLine()) != null)
+                    {
+                        string[] parametros = line.Split(';');
+                        if (parametros[0] != ID)
+                        {
+                            LineaArchivo.Add(line);
+                        }
+                        else
+                        {
+                            string nuevalinea = txtnumero.Text + ";" + txtentidad.Text + ";" + txtapertura.Text + ";" + txtNdeexpendiente.Text + ";" + txtjuzgado.Text + ";" + txtjurisdiccion.Text + ";" + txtdireccion.Text + ";" + txtLresponsable.Text + ";";
+                            LineaArchivo.Add(nuevalinea);
+                        }
+                    }
+                }
+                using (StreamWriter escribir = new StreamWriter(rutafinal))
+                {
+                    foreach (string line in LineaArchivo) { escribir.WriteLine(line); }
+                }
+                MessageBox.Show("Modificado exitosamente");
+            }
+        }
+
+        private void FrmRegistrar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape) 
+            {
+                frmdatosgrilla volver = new frmdatosgrilla();
+                volver.Show();
+                this.Hide();
+            }
+        }
     }
 }

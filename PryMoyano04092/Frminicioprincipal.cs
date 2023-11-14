@@ -44,5 +44,33 @@ namespace PryMoyano04092
         {
             Application.Exit();
         }
+
+        private void Frminicioprincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+            {
+              
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Frminicioprincipal_Load(object sender, EventArgs e)
+        {
+            lbltime.Text = DateTime.Now.ToLongTimeString();
+            lbldate.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

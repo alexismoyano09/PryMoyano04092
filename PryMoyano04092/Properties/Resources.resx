@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\groupbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="groupbox2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\groupbox2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,19 +130,19 @@
   <data name="PACIFÍCO SEGUROS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PACIFÍCO SEGUROS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PACIFÍCO SEGUROS (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PACIFÍCO SEGUROS (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PACIFÍCO SEGUROS (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PACIFÍCO SEGUROS (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="groupbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\groupbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PACIFÍCO SEGUROS (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PACIFÍCO SEGUROS (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PACIFÍCO SEGUROS (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PACIFÍCO SEGUROS (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PACIFÍCO SEGUROS (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PACIFÍCO SEGUROS (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

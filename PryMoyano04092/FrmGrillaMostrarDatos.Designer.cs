@@ -154,6 +154,7 @@
             this.Name = "frmdatosgrilla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmdatosgrilla_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.DtgGrillaMostrar)).EndInit();
             this.ResumeLayout(false);
 
